@@ -2,7 +2,8 @@ defmodule CardsTest do
   use ExUnit.Case
   doctest Cards
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  test "embaralhando as cartas" do
+    deck = Cards.criar_deck()
+    refute deck == Cards.embaralhar(deck) 
   end
 end
